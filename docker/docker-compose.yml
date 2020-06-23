@@ -1,0 +1,10 @@
+version: '3.1'
+
+services:
+  dinastry_db:
+    image: 'mongo:latest'
+    volumes:
+      - ./db:/data/db
+      - ./inout:/inout
+    ports:
+      - '27017:27017'

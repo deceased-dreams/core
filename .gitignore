@@ -1,0 +1,3 @@
+docker/db/
+web/node_modules/
+web/.env
