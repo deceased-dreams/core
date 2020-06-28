@@ -1,0 +1,302 @@
+[
+  {
+    "label": "Umur",
+    "key": "umur",
+    "kind": "numeric",
+    "ranges": [
+      {
+        "max": 40,
+        "min": 0,
+        "upper_bound": "<",
+        "lower_bound": "<",
+        "value": 1
+      },
+      {
+        "min": 40,
+        "max": 46,
+        "lower_bound": "<=",
+        "upper_bound": "<",
+        "value": 2
+      },
+      {
+        "min": 46,
+        "max": 53,
+        "lower_bound": "<=",
+        "upper_bound": "<",
+        "value": 3
+      },
+      {
+        "min": 53,
+        "max": 60,
+        "lower_bound": "<=",
+        "upper_bound": "<",
+        "value": 4
+      },
+      {
+        "min": 60,
+        "lower_bound": "<=",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "label": "Pendidikan",
+    "key": "pendidikan",
+    "kind": "categorial",
+    "options": [
+      {
+        "label": "S3",
+        "value": "s3"
+      },
+      {
+        "label": "S2",
+        "value": "s2"
+      },
+      {
+        "label": "S1",
+        "value": "s1"
+      },
+      {
+        "label": "D4",
+        "value": "d4"
+      },
+      {
+        "label": "D3",
+        "value": "d3"
+      },
+      {
+        "label": "D2",
+        "value": "d2"
+      },
+      {
+        "label": "D1",
+        "value": "d1"
+      },
+      {
+        "label": "SMA",
+        "value": "sma"
+      },
+      {
+        "label": "SMP",
+        "value": "smp"
+      },
+      {
+        "label": "SD",
+        "value": "sd"
+      },
+      {
+        "label": "tidak sekolah",
+        "value": "tidak sekolah"
+      }
+    ]
+  },
+  {
+    "label": "Pekerjaan",
+    "key": "pekerjaan",
+    "kind": "categorial",
+    "options": [
+      {
+        "label": "pns",
+        "value": "pns"
+      },
+      {
+        "label": "pensiunan",
+        "value": "pensiunan"
+      },
+      {
+        "label": "swasta",
+        "value": "swasta"
+      },
+      {
+        "label": "buruh",
+        "value": "buruh"
+      },
+      {
+        "label": "petani",
+        "value": "petani"
+      }
+    ]
+  },
+  {
+    "label": "Penghasilan",
+    "key": "penghasilan",
+    "kind": "numeric",
+    "ranges": [
+      {
+        "min": 0,
+        "max": 1000000,
+        "lower_bound": "<=",
+        "upper_bound": "<",
+        "value": 1
+      },
+      {
+        "min": 1000000,
+        "max": 2000000,
+        "lower_bound": "<=",
+        "upper_bound": "<",
+        "value": 2
+      },
+      {
+        "min": 2000000,
+        "lower_bound": "<=",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "label": "Kepemilikan Tanah",
+    "key": "kt",
+    "kind": "categorial",
+    "options": [
+      {
+        "label": "Milik Orang Lain",
+        "value": "orang lain"
+      },
+      {
+        "label": "Milik Sendiri",
+        "value": "sendiri"
+      }
+    ]
+  },
+  {
+    "label": "Kepemilikan Rumah",
+    "key": "kr",
+    "kind": "categorial",
+    "options": [
+      {
+        "label": "Milik Orang Lain",
+        "value": "orang lain"
+      },
+      {
+        "label": "Milik Sendiri",
+        "value": "sendiri"
+      }
+    ]
+  },
+  {
+    "label": "Kepemilikan Kamar Mandi",
+    "key": "kkm",
+    "kind": "categorial",
+    "options": [
+      {
+        "label": "Milik Orang Lain",
+        "value": "orang lain"
+      },
+      {
+        "label": "Milik Sendiri",
+        "value": "sendiri"
+      }
+    ]
+  },
+  {
+    "label": "Jumlah Penghuni",
+    "key": "jp",
+    "kind": "numeric",
+    "max": 8,
+    "ranges": [
+      {
+        "max": 2,
+        "upper_bound": "<=",
+        "value": 1
+      },
+      {
+        "min": 2,
+        "max": 5,
+        "lower_bound": "<",
+        "upper_bound": "<=",
+        "value": 2
+      },
+      {
+        "min": 5,
+        "max": 8,
+        "lower_bound": "<",
+        "upper_bound": "<=",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "label": "Kondisi Atap",
+    "key": "ka",
+    "kind": "categorial",
+    "options": [
+      {
+        "label": "Seng",
+        "value": "seng"
+      },
+      {
+        "label": "Alang - Alang",
+        "value": "alang"
+      },
+      {
+        "label": "Daun Gewang",
+        "value": "gewang"
+      }
+    ]
+  },
+  {
+    "label": "Kondisi Dinding",
+    "key": "kd",
+    "kind": "categorial",
+    "options": [
+      {
+        "label": "Tembok",
+        "value": "tembok"
+      },
+      {
+        "label": "Dinding",
+        "value": "dinding"
+      }
+    ]
+  },
+  {
+    "label": "Kondisi Lantai",
+    "key": "kl",
+    "kind": "categorial",
+    "options": [
+      {
+        "label": "Keramik",
+        "value": "keramik"
+      },
+      {
+        "label": "Lantai",
+        "value": "lantai"
+      },
+      {
+        "label": "Tanah",
+        "value": "tanah"
+      }
+    ]
+  },
+  {
+    "label": "Sumber Air",
+    "key": "sa",
+    "kind": "categorial",
+    "options": [
+      {
+        "label": "PDAM",
+        "value": "pdam"
+      },
+      {
+        "label": "Sumur",
+        "value": "sumur"
+      }
+    ]
+  },
+  {
+    "label": "Sumber Listrik",
+    "key": "sl",
+    "kind": "categorial",
+    "options": [
+      {
+        "label": "Ada",
+        "value": "ada"
+      },
+      {
+        "label": "Tidak Ada",
+        "value": "tidak ada"
+      }
+    ]
+  }
+]
+

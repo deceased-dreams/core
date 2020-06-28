@@ -1,3 +1,8 @@
 docker/db/
-web/node_modules/
-web/.env
+api/node_modules/
+api/.env
+api/.cache/
+api/dist/
+client/node_modules
+client/.cache
+client/dist

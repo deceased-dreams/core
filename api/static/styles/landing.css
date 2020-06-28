@@ -1,0 +1,6 @@
+.landing .hero {
+  background: 
+        linear-gradient(to bottom, rgba(250, 250, 250, 0.5), rgba(250, 250, 250, 0.8)),
+        url(/images/hero.png);
+  margin: 0;
+}

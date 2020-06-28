@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('../commons/header'); %>
+  </head>
+  <body class="landing w-screen h-screen p-0 w-0 flex flex-col">
+    <%- include('../commons/navbar'); %>
+    <section class="px-12 flex-grow">
+      <div class="flex items-center">
+        <h3 class="uppercase tracking-widest text-lg font-semibold my-4">daftar penerima bantuan</h3>
+        <a
+          href="create"
+          class="ml-3 px-4 py-1 rounded disabled:opacity-50 bg-indigo-700 text-white font-bold text-sm"
+        >
+          Tambah
+        </a>
+        <div class="flex-grow"></div>
+        <div class='flex items-center'>
+          <div class="inline-block relative mr-2">
+            <select
+              class="block appearance-none w-full px-4 py-1 pr-8 rounded focus:outline-none bg-white border border-gray-400 text-sm"
+            >
+              <option>tampilkan: 10</option>
+              <option>tampilkan: 25</option>
+              <option>tampilkan: 50</option>
+              <option>tampilkan: semua</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+              <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    <footer class="h-16 bg-white border-t border-gray-300"></footer>
+    <script src="/public/js/base.js"></script>
+    <script>
+      
+    </script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+@import "./tailwind.pcss";
+
+body {
+  margin: 0 !important;
+}
+
+#root {
+  overflow-x: hidden;
+}
+
+input[type="radio"].jo-radio {
+  transition: background .2s,
+      transform .2s;
+}
+
+input[type="radio"]:checked.jo-radio {
+  background: #4299E1;
+}
+
+.jo-auto-complete .input-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.jo-auto-complete .spinner {
+  animation-name: spinner;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.jo-spinner .spinner {
+  animation-name: spinner;
+  animation-duration: 1200ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.landing .hero {
+  background: 
+      linear-gradient(to bottom, rgba(250, 250, 250, 0.5), rgba(250, 250, 250, 0.8)),
+      url(/images/hero.png);
+  margin: 0;
+}
