@@ -11,3 +11,5 @@ client/dist
 auth.github
 auth.google
 auth.heroku
+heroku/
+ghpage/
