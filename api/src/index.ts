@@ -1,11 +1,7 @@
-// require('dotenv').config();
-// const path = require('path');
-// if (process.env.NODE_ENV == 'production') {
-//    require('dotenv').config({
-//     path: path.resolve(process.cwd(), '.env.production')
-//    });
-// }
-// import boot from './boot';
+if (process.env.NODE_ENV == 'development') {
+  require('dotenv').config();
+}
+import boot from './boot';
 
 const options = {
   port: parseInt(process.env.PORT),
