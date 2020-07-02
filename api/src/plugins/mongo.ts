@@ -16,8 +16,8 @@ type MongoPluginOption = {
 
 export default fp(async (fastify: FastifyInstance, opts: MongoPluginOption) => {
   const mclient = new MongoClient(opts.uri, { 
-    useNewUrlParser: true,
-    useUnifiedTopology: true
+    useNewUrlParser: true
+    // useUnifiedTopology: true
   });
   await mclient.connect();
   const db = mclient.db(opts.dbName);
