@@ -46,6 +46,9 @@
   })
 </script>
 
+<div class="w-full bg-blue-800 text-white flex items-center justify-center px-12 h-20">
+  <div class="font-bold text-2xl">Form Klasifikasi</div>
+</div>
 <JoAsyncContent 
   {networkStatus}
   {errorMessage}

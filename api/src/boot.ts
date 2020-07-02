@@ -23,7 +23,8 @@ export default async function (options: BootOption) {
     port
   } = options
   const fastify = Fastify({
-    logger: true
+    logger: true,
+    pluginTimeout: 30000
   })
   fastify
     .register(MongoPlugin, { uri: mongoUri, dbName })

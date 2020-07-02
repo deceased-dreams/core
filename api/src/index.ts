@@ -1,8 +1,10 @@
-require('dotenv').config();
-// if (process.env.NODE_ENV == 'development') {
-//    require('dotenv').config();
+// require('dotenv').config();
+// const path = require('path');
+// if (process.env.NODE_ENV == 'production') {
+//    require('dotenv').config({
+//     path: path.resolve(process.cwd(), '.env.production')
+//    });
 // }
-console.log('foobar valid foos ')
 import boot from './boot';
 
 const options = {

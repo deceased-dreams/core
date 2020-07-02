@@ -87137,8 +87137,8 @@ input[type="radio"]:checked.jo-radio {
 
 .landing .hero {
   background: 
-      linear-gradient(to bottom, rgba(250, 250, 250, 0.5), rgba(250, 250, 250, 0.8)),
-      url(/hero.d8eebeaf.png);
+      linear-gradient(to bottom, rgba(250, 250, 250, 0.1), rgba(250, 250, 250, 0.3)),
+      url(/back.c299382f.jpg);
   margin: 0;
 }
 /*# sourceMappingURL=/src.7ed060e2.css.map */

@@ -6,3 +6,6 @@ api/dist/
 client/node_modules
 client/.cache
 client/dist
+auth.github
+auth.google
+auth.heroku
