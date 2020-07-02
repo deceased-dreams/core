@@ -46,7 +46,8 @@ function export_transform () {
         prefix = '';
       }
       this.push(prefix);
-      this.push( JSON.stringify(chunk) );
+      const { _id, ...data } = chunk;
+      this.push( JSON.stringify(data) );
       cb();
     },
     flush (cb) {
@@ -166,6 +167,21 @@ export default async (fastify: FastifyInstance) => {
       const _id = new ObjectID(request.params.id);
       let item = await rows.findOne({ _id });
       reply.send(item);
+    }
+  })
+
+  fastify.delete('/', {
+    handler: async (request, reply) => {
+      await rows.deleteMany({});
+      reply.send('ok');
+    }
+  })
+
+  fastify.delete('/:id', {
+    handler: async (request, reply) => {
+      const _id = new ObjectID(request.params.id);
+      await rows.deleteOne({ _id });
+      reply.send('ok');
     }
   })
 

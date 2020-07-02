@@ -3,12 +3,10 @@
   import JoInput from 'dinastry/components/commons/JoInput.svelte';
   import JoNumber from 'dinastry/components/commons/JoNumber.svelte';
   import JoSelect from 'dinastry/components/commons/JoSelect.svelte';
-  import all_criteria from 'dinastry/services/all_criteria';
-  import global_numeric_bound from 'dinastry/services/global_numeric_bound';
   import build_errors from 'dinastry/commons/build_errors_from_criteria';
   import all_is_null from 'dinastry/commons/all_is_null';
 
-  let criteria = [];
+  export let criteria = [];
   let result = {
     nama: ''
   };
@@ -21,13 +19,8 @@
   $: invalid = !all_is_null(errors);
 
   onMount(async () => {
-    let _cs = await all_criteria();
-    criteria = _cs.map(c => {
+    criteria.forEach(c => {
       result[c.key] = null;
-      if (c.kind == 'numeric') {
-        return { ...c, ...global_numeric_bound(c)}
-      }
-      return c
     });
     if (initial) {
       result = {
@@ -35,7 +28,6 @@
         ...initial
       };
     }
-    console.log(criteria);
   })
 </script>
 

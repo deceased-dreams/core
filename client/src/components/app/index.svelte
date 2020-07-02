@@ -8,13 +8,19 @@
   import DataCreate from './data/create.svelte';
   import DataUpdate from './data/update.svelte';
 
+  import KlasifikasiForm from './klasifikasi/form.svelte';
+
+  import Testing from './testing/index.svelte';
+
   const prefix = '/app';
   const routes = {
     '/data/list': DataList,
     '/data/import': DataImport,
     '/data/export': DataExport,
     '/data/create': DataCreate,
-    '/data/update/:id': DataUpdate
+    '/data/update/:id': DataUpdate,
+    '/klasifikasi': KlasifikasiForm,
+    '/testing': Testing
   };
 </script>
 

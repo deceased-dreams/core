@@ -9,9 +9,7 @@
   import JoButton from 'dinastry/components/commons/JoButton.svelte';
   import all_criteria from 'dinastry/services/all_criteria';
   import all_rows from 'dinastry/services/rows';
-  import format_numeric from 'dinastry/services/format_numeric.js';
   import truncate from 'dinastry/services/rows_truncate.js';
-  import del from 'dinastry/services/row_delete.js';
   import 'dinastry/styles/jo-table.css';
 
   const take = 100;
@@ -24,8 +22,6 @@
 
   $: filtered_criteria = criteria.filter(c => !hidden_criteria.includes(c.key));
   $: search({ keyword });
-  $: layak_count = rows.filter(it => it._class).length;
-  $: tdk_layak_count = rows.length - layak_count;
 
   function hide_criteria (key) {
     hidden_criteria = [...hidden_criteria, key];
@@ -66,19 +62,6 @@
     }
   }
 
-  async function on_delete (id) {
-    networkStatus = 'loading';
-    try {
-      await del(id)
-      networkStatus = 'success';
-    } catch (err) {
-      console.log(err);
-      networkStatus = 'error';
-    } finally {
-      load_data();
-    }
-  }
-
   onMount(load_data);
 </script>
 
@@ -105,10 +88,7 @@
         </div>
       {/each}
     </div>
-    <div class="my-6 flex items-center">
-      <div class="mr-2 font-bold">Total Data: {rows.length}</div>
-      <div class="mr-2 font-bold">/Layak: {layak_count}</div>
-      <div class="mr-2 font-bold">/Tidak Layak: {tdk_layak_count}</div>
+    <div class="my-6">
       <JoInput bind:value={keyword} placeholder="keyword..." />
       <JoButton action={on_truncate} dark color="red" label="kosongkan" />
     </div>
@@ -120,7 +100,6 @@
             <th class="text-xs">{crit.key.substring(0, 4)}</th>
           {/each}
           <th></th>
-          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -128,29 +107,9 @@
           <tr class="text-xs">
             <td>{row.nama}</td>
             {#each filtered_criteria as crit (crit.key)}
-              <td>
-                <span class="mr-1">{row[crit.key]}</span>
-                {#if (crit.kind == 'numeric')}
-                  <span class="px-1 bg-gray-200">{format_numeric(crit, row[crit.key])}</span>
-                {/if}
-              </td>
+              <td>{row[crit.key]}</td>
             {/each}
-            <td>
-              {row._class == 1 ? 'Layak' : 'Tidak Layak'}
-            </td>
             <td class="flex items-center justify-end">
-              <JoButton 
-                action={() => {
-                  on_delete(row._id)
-                }}
-                dark 
-                color="red" 
-                cls="p-1 rounded-full mr-1"
-              >
-                <div class="h-3 w-3">
-                  <FaTrash/>
-                </div>
-              </JoButton>
               <JoButton 
                 action={() => {
                   push_route(`/app/data/update/${row._id}`)
@@ -174,4 +133,3 @@
     </div>
   </div>
 </JoAsyncContent>
-

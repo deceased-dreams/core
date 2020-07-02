@@ -11,6 +11,7 @@ export default async (fastify: FastifyInstance) => {
       body: S.array().items(CriteriaSchema)
     },
     handler: async (request, reply) => {
+      await collection.deleteMany({});
       const result = await collection.insert(request.body);
       reply.send(result.insertedCount);
     }

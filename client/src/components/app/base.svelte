@@ -9,7 +9,7 @@
       <span class="font-semibold text-gray-100 ml-2 text-xl">Dinastry</span>
     </div>
     <div class="flex items-center justify-end">
-      <a href="#/app/data" class="pr-4 text-gray-100 font-semibold">data</a>
+      <a href="#/app/data/list" class="pr-4 text-gray-100 font-semibold">data</a>
       <a href="#/app/klasifikasi" class="p-4 text-gray-100 font-semibold">klasifikasi</a>
       <a href="#/app/testing" class="p-4 text-gray-100 font-semibold">pengujian</a>
       <a href="#/app/logout" class="pl-4 text-gray-100 font-semibold">logout</a>
@@ -18,5 +18,7 @@
   <section class="flex-grow flex flex-col">
     <slot></slot>
   </section>
-  <footer class="h-16 bg-white border-t border-gray-300"></footer>
+  <footer class="h-12 bg-white border-t border-gray-300 bg-blue-900 text-white flex items-center justify-start px-12">
+    <div class="font-bold text-sm">copyright dinastry</div>
+  </footer>
 </div>
