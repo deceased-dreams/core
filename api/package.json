@@ -35,7 +35,7 @@
     "fastify-multer": "^1.5.4",
     "fastify-plugin": "^1.6.1",
     "fastify-secure-session": "^1.2.0",
-    "fastify-static": "^2.7.0",
+    "fastify-static": "^4.2.4",
     "fluent-schema": "^1.0.4",
     "lodash": "^4.17.15",
     "mongodb": "^3.5.9",
